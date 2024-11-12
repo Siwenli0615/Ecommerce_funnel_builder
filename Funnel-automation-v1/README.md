@@ -11,7 +11,8 @@ Our tool leverages the power of Google BigQuery to process large volumes of even
 - Compare different user segments and time periods
 - Generate both open and closed funnel analyses for users and sessions
 
-![Sample Funnel Visualization](path/to/sample_funnel_image.png)
+![Sample Funnel Visualization](images/funnelpic1.png)
+![Sample Funnel Visualization](images/funnelpic2.png)
 
 What sets this tool apart is its flexibility and scalability. It can handle massive datasets, work with custom event definitions, and produce interactive visualizations, all within the familiar Jupyter notebook environment.
 
@@ -26,16 +27,17 @@ What sets this tool apart is its flexibility and scalability. It can handle mass
 
 1. Set up your BigQuery project, dataset, and table information in the notebook.
 2. Configure the destination for your analysis results.
+![Set up directions](images/set_up_directions.png)
 
 ### Running the Analysis
 
 1. Execute the notebook cells in order.
+![Set up directions](images/Run_all_codes.png)
 2. You'll be prompted to select a date range for your analysis.
 3. Choose the events you want to include in your funnel.
-4. Select any additional dimensions for segmentation.
+4. Select any additional dimensions and/or filter for segmentation.
 5. The tool will generate and display interactive funnel visualizations.
 
-![Tool Demo](path/to/tool_demo.gif)
 
 ## Data Tables Generated
 
@@ -59,7 +61,7 @@ Each table includes:
 
 ## Future Work
 
-We have exciting plans to enhance this tool further:
+There is exciting opportunities to enhance this tool further:
 
 1. **Machine Learning Integration**: Implement predictive models to forecast conversion rates and identify at-risk segments.
 2. **A/B Test Analysis**: Add functionality to compare funnels between different test groups.
@@ -67,7 +69,7 @@ We have exciting plans to enhance this tool further:
 4. **Multi-Channel Funnels**: Extend the tool to analyze user journeys across different marketing channels.
 5. **Custom Visualization Themes**: Allow users to customize the look and feel of funnel visualizations.
 
-![Future Features Mockup](path/to/future_features_mockup.png)
+![Future Features Mockup](images/future_mock_up.png)
 
 ## Troubleshooting
 
@@ -77,12 +79,10 @@ If you encounter any issues while using the tool, please check the following:
 2. Verify that your source data is in the expected format.
 3. Check that you have the necessary permissions to create and query tables in your BigQuery project.
 
-For more detailed troubleshooting, please refer to our [Troubleshooting Guide](link/to/troubleshooting/guide).
+## Contact
+
+For any questions or support, please contact [siwenli0615@gmail.com](mailto:siwenli0615@gmail.com).
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Contact
-
-For any questions or support, please contact [siwenli0615@gmail.com](mailto:siwenli0615@gmail.com).
