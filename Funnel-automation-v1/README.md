@@ -11,8 +11,8 @@ Our tool leverages the power of Google BigQuery to process large volumes of even
 - Compare different user segments and time periods
 - Generate both open and closed funnel analyses for users and sessions
 
-![Sample Funnel Visualization](images/funnelpic1.png)
-![Sample Funnel Visualization](images/funnelpic2.png)
+![Sample Funnel Visualization](images/funnelpic1.png){width=300px}
+![Sample Funnel Visualization](images/funnelpic2.png){width=300px}
 
 What sets this tool apart is its flexibility and scalability. It can handle massive datasets, work with custom event definitions, and produce interactive visualizations, all within the familiar Jupyter notebook environment.
 
@@ -27,12 +27,12 @@ What sets this tool apart is its flexibility and scalability. It can handle mass
 
 1. Set up your BigQuery project, dataset, and table information in the notebook.
 2. Configure the destination for your analysis results.
-![Set up directions](images/set_up_directions.png)
+![Set up directions](images/set_up_directions.png){width=300px}
 
 ### Running the Analysis
 
 1. Execute the notebook cells in order.
-![Set up directions](images/Run_all_codes.png)
+![Set up directions](images/Run_all_codes.png){width=300px}
 2. You'll be prompted to select a date range for your analysis.
 3. Choose the events you want to include in your funnel.
 4. Select any additional dimensions and/or filter for segmentation.
@@ -86,3 +86,4 @@ For any questions or support, please contact [siwenli0615@gmail.com](mailto:siwe
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
