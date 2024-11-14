@@ -21,8 +21,19 @@ What sets this tool apart is its flexibility and scalability. It can handle mass
 ### Setup
 
 1. Ensure you have access to Google BigQuery and the necessary permissions.
-2. Install required Python libraries:
-        pip install google-cloud-bigquery pandas plotly ipywidgets
+2. This tool has been developed and tested in the Google Cloud Vertex AI Workbench (formerly AI Platform Notebooks) environment. If you're using a different environment:
+   - You may need to install required Python libraries:
+     ```
+     pip install google-cloud-bigquery pandas plotly ipywidgets
+     ```
+   - Some features may require additional setup or modification.
+
+### Note on Development Environment
+
+- The code has been primarily tested in the Google Cloud Vertex AI Workbench environment.
+- If you're using a different notebook environment (e.g., local Jupyter notebook, Colab), you might encounter compatibility issues or need to make adjustments to the code.
+- In non-Google Cloud environments, you'll need to set up authentication for BigQuery access manually.
+
 ### Configuration
 
 1. Set up your BigQuery project, dataset, and table information in the notebook.
@@ -39,7 +50,6 @@ What sets this tool apart is its flexibility and scalability. It can handle mass
 4. Select any additional dimensions and/or filter for segmentation.
 5. The tool will generate and display interactive funnel visualizations.
 
-
 ## Data Tables Generated
 
 The tool generates four main types of funnel tables in BigQuery:
@@ -53,6 +63,23 @@ Each table includes:
 - Event counts for each funnel step
 - Conversion rates between steps
 - Additional selected dimensions for segmentation
+## Query Foundations
+
+The funnel query codes in this tool are developed based on the methodology outlined in the following document:
+
+[Google Analytics 4 (GA4) BigQuery Funnel Analysis](https://docs.google.com/document/d/157XXSaSLQ0wCuoC_TJiZfexqlngE0I7AopnTMY_CD4c/edit?tab=t.0)
+
+This document serves as the foundation for our query logic and structure. If you notice any discrepancies in the results or need to troubleshoot the funnel analysis, we recommend:
+
+1. Reviewing this document to understand the underlying logic of GA4 funnel analysis in BigQuery.
+2. Comparing our implemented queries with the examples provided in the document.
+3. Using the queries in the document as a baseline to verify or correct the results.
+
+For developers working on maintaining or extending this tool:
+- If you encounter issues with the funnel analysis results, consider rebuilding the queries using this document as a foundation.
+- Any modifications to the core funnel logic should be cross-referenced with this document to ensure consistency with GA4 best practices.
+
+This reference is crucial for ensuring the accuracy and reliability of the funnel analysis results. Always refer back to this document when making significant changes to the query structure or when troubleshooting unexpected results.
 
 ## What's Not Included
 
@@ -79,6 +106,36 @@ If you encounter any issues while using the tool, please check the following:
 1. Ensure your BigQuery credentials are correctly set up.
 2. Verify that your source data is in the expected format.
 3. Check that you have the necessary permissions to create and query tables in your BigQuery project.
+
+
+## Limitations and Undeveloped Features (To future developers)
+
+While this tool provides powerful funnel analysis capabilities, there are some limitations and features that are not yet fully developed:
+
+1. **Source Data Partitioning**: 
+   - The tool currently assumes that the source data is partitioned by date. 
+   - Each partition should be named in the format `events_YYYYMMDD`.
+   - Users with non-partitioned data or different partitioning schemes may need to modify the code or preprocess their data.
+
+2. **Handling of TYPE3 Nested Fields**:
+   - The tool has limited support for complex nested fields, particularly TYPE3 nested fields like "items".
+   - These fields often have a variable structure, where the nested fields are not fixed.
+   - For example, the "items" field might contain different subfields for different types of items.
+   - Current implementation may not correctly handle or allow full exploration of these complex nested structures.
+
+3. **Dynamic Schema Adaptation**:
+   - The tool doesn't automatically adapt to changes in the data schema, particularly for nested fields.
+   - If the structure of nested fields changes, manual updates to the code may be required.
+
+4. **Advanced Nested Field Querying**:
+   - Complex queries involving nested fields, especially arrays of structs, are not fully supported.
+   - Users may need to manually modify queries for advanced analysis of nested data.
+
+5. **UI for Nested Field Selection**:
+   - The user interface for selecting and filtering on nested fields is not fully developed.
+   - This limits the ease of use when working with complex data structures.
+
+Future development should focus on enhancing these areas to provide more robust and flexible analysis capabilities, particularly for complex e-commerce data with variable nested structures.
 
 ## Contact
 
