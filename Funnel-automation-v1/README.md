@@ -86,6 +86,7 @@ This reference is crucial for ensuring the accuracy and reliability of the funne
 - Data collection: This tool assumes you already have event data in BigQuery.
 - Advanced statistical analysis: While the tool provides conversion rates, it doesn't include more complex statistical tests or predictive models.
 - Automatic insights generation: The tool visualizes data but doesn't automatically identify anomalies or suggest optimizations.
+- The data for dashboard from Looker studio needs to be sent to Siwens_NoN and FUNNEL_TYPE = 'Dashboard'
 
 ## Future Work
 
